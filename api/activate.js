@@ -37,6 +37,8 @@ module.exports = async (req, res) => {
     let whr = await Axios.post(webhook, {
         email: req.body.email,
         name: req.body.name
+    }).catch(e => { 
+        console.error(e),
     });
     console.log(whr)
     /* res.json({
