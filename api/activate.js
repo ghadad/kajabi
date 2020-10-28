@@ -28,16 +28,7 @@ module.exports = async (req, res) => {
         errors.push("invalid icount secret")
     }
 
-
-    if (!req.body.sku)
-        errors.push("missing sku")
-
-    if (!req.body.email)
-        errors.push("missing email")
-
-    if (!req.body.name)
-        errors.push("missing name")
-    if (errors.length)
+ if (errors.length)
         return res.status(500).send({
             errors: errors
         });
