@@ -10,14 +10,14 @@
 </head>
 <body>
     <h1>test vue portal</h1>
-    <div id="app-2">
+     <div id="app-2">
         <div>in vue - {{message}}</div>
-        <Portal target="#outer">
-          {{message}}
-          </Portal>
+        <teleport  to="#outer">
+         in portal -   {{message}}
+          </teleport >
       </div>
 <h2>Before portal element</h2>
-      <div id="outer"></div>
-      <script src='main.js'></script>
+ <div id="outer"></div>
+   <script src='main.js'></script>
 </body>
 </html>
