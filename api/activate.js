@@ -27,7 +27,7 @@ module.exports = async (req, res) => {
             errors: errors
         });
 
-        
+
     let webhook = hooks[req.body.sku]
     if (!webhook)
         return res.status(401).send({
@@ -49,7 +49,7 @@ module.exports = async (req, res) => {
             errStatus = error.response.status;
         } else if (error.request) {
             // The request was made but no response was received
-            console.error("error.request", error.request);
+            console.log("error.request", error.request);
         } else {
             // Something happened in setting up the request that triggered an Error
             errMessage = error.message;
@@ -57,7 +57,7 @@ module.exports = async (req, res) => {
 
     };
 
-    console.info(whr)
+    console.log(whr)
     /* res.json({
         hooks:hooks,
         headers: req.headers,
