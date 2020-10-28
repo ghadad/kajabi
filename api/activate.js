@@ -5,9 +5,11 @@ let  hooks ={};
     if(k.match(/K\d/))
     hooks[k] = process.env[k];
 })
+
 module.exports = (req, res) => {
     res.json({
-      hooks:hooks,
+     //  hooks:hooks,
+     headers:req.headers, 
       body: req.body,
       query: req.query,
       cookies: req.cookies,
