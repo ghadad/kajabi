@@ -34,10 +34,13 @@ module.exports = async (req, res) => {
             error: "Cannot find proper webhook for sku : " + req.body.sku
         });
 
-    let whr = await Axios.post(webhook, {
+    let whr = {} ;
+    try { whr= await Axios.post(webhook, {
         email: req.body.email,
         name: req.body.name
-    }).catch(function (error) {
+    });
+    
+} catch(error){
         if (error.response) {
             // Request made and server responded
             console.log("error.response.data",error.response.data);
