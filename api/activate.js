@@ -7,27 +7,27 @@ Object.keys(process.env).forEach(k => {
 })
 
 module.exports = async (req, res) => {
-    console.error("get activation request", req.body)
+    console.log("get activation request", req.body)
     let icountSecret = req.headers['X-iCount-Secret'] || req.headers['x-icount-secret'];
 
+    let errors = [];
     if (icountSecret !== process.env.ICOUNT_SECRET)
-        return res.status(401).send({
-            error: "invalid icount secret",
-            headers: req.headers
-        });
+        errors.push("invalid icount secret")
+
     if (!req.body.sku)
-        return res.status(401).send({
-            error: "missing sku"
-        });
+        errors.push("missing sku")
+
     if (!req.body.email)
-        return res.status(401).send({
-            error: "missing email"
-        });
+        errors.push("missing email")
+
     if (!req.body.name)
+        errors.push("missing name")
+    if (errors.length)
         return res.status(401).send({
-            error: "missing name"
+            errors: errors
         });
 
+        
     let webhook = hooks[req.body.sku]
     if (!webhook)
         return res.status(401).send({
@@ -35,7 +35,7 @@ module.exports = async (req, res) => {
         });
 
     let whr = {};
-    let errData,errStatus,errMessage ;
+    let errData, errStatus, errMessage;
     try {
         whr = await Axios.post(webhook, {
             email: req.body.email,
@@ -45,34 +45,34 @@ module.exports = async (req, res) => {
     } catch (error) {
         if (error.response) {
             // Request made and server responded
-            errData =  error.response.data ;
-            errStatus =  error.response.status ;
+            errData = error.response.data;
+            errStatus = error.response.status;
         } else if (error.request) {
             // The request was made but no response was received
             console.error("error.request", error.request);
         } else {
             // Something happened in setting up the request that triggered an Error
-            errMessage =  error.message ;
+            errMessage = error.message;
         }
 
     };
 
-console.info(whr)
-/* res.json({
-    hooks:hooks,
-    headers: req.headers,
-    body: req.body,
-    query: req.query,
-    cookies: req.cookies,
-})
-*/
+    console.info(whr)
+    /* res.json({
+        hooks:hooks,
+        headers: req.headers,
+        body: req.body,
+        query: req.query,
+        cookies: req.cookies,
+    })
+    */
 
-res.json({
-    data: whr.data,
-    success: true,
-    v:1,
-    errData:errData,
-    errStatus:errStatus,
-    errMessage:errMessage
-  })
+    res.json({
+        data: whr.data,
+        success: true,
+        v: 1,
+        errData: errData,
+        errStatus: errStatus,
+        errMessage: errMessage
+    })
 }
