@@ -35,6 +35,7 @@ module.exports = async (req, res) => {
         });
 
     let whr = {};
+    let errData,errStatus,errMessage ;
     try {
         whr = await Axios.post(webhook, {
             email: req.body.email,
@@ -44,14 +45,14 @@ module.exports = async (req, res) => {
     } catch (error) {
         if (error.response) {
             // Request made and server responded
-            console.error("error.response.data", error.response.data);
-            console.error("error.response.status", error.response.status);
+            errData =  error.response.data ;
+            errStatus =  error.response.status ;
         } else if (error.request) {
             // The request was made but no response was received
             console.error("error.request", error.request);
         } else {
             // Something happened in setting up the request that triggered an Error
-            console.error('Error', error.message);
+            errMessage =  error.message ;
         }
 
     };
@@ -69,6 +70,9 @@ console.info(whr)
 res.json({
     data: whr.data,
     success: true,
-    v:1
+    v:1,
+    errData:errData,
+    errStatus:errStatus,
+    errMessage:errMessage
   })
 }
