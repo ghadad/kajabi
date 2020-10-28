@@ -10,18 +10,24 @@ Object.keys(process.env).forEach(k => {
 module.exports = async (req, res) => {
     let params = req.body || {};
     console.log("get activation request %j", req.body);
-    if (params.doctype !== "invrec" )
+    if (params.doctype !== "invrec" ){
+        console.error("params.doctype:",params.doctype)
         return res.json({
             success: true,
             message: "not kajabi transaction"
         })
+    }
+        
 
 
 let icountSecret = req.headers['X-iCount-Secret'] || req.headers['x-icount-secret'];
 
 let errors = [];
-if (icountSecret !== process.env.ICOUNT_SECRET)
+if (icountSecret !== process.env.ICOUNT_SECRET){
+    console.error("icountSecret",icountSecret,process.env.ICOUNT_SECRET)
     errors.push("invalid icount secret")
+}
+    
 
 if (!req.body.sku)
     errors.push("missing sku")
@@ -65,6 +71,7 @@ try {
         // Request made and server responded
         errData = error.response.data;
         errStatus = error.response.status;
+        
     } else if (error.request) {
         // The request was made but no response was received
         console.log("error.request", error.request);
@@ -72,6 +79,10 @@ try {
         // Something happened in setting up the request that triggered an Error
         errMessage = error.message;
     }
+
+    console.error("errData",errData)
+    console.error("errStatus",errStatus)
+    console.error("errMessage",errMessage)
 
 };
 
@@ -83,7 +94,7 @@ try {
     cookies: req.cookies,
 })
 */
-
+console.log("whr data:%j",whr.data);
 res.json({
     data: whr.data,
     success: true,
