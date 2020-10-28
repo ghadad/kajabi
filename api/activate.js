@@ -44,14 +44,14 @@ module.exports = async (req, res) => {
     } catch (error) {
         if (error.response) {
             // Request made and server responded
-            console.log("error.response.data", error.response.data);
-            console.log("error.response.status", error.response.status);
+            console.error("error.response.data", error.response.data);
+            console.error("error.response.status", error.response.status);
         } else if (error.request) {
             // The request was made but no response was received
-            console.log("error.request", error.request);
+            console.error("error.request", error.request);
         } else {
             // Something happened in setting up the request that triggered an Error
-            console.log('Error', error.message);
+            console.error('Error', error.message);
         }
 
     };
