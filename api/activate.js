@@ -1,6 +1,6 @@
 const Axios = require("axios");
 
-let  hooks;
+let  hooks ={};
   Object.keys(process.env).forEach(k =>{
     if(k.match(/K\d/))
     hooks[k] = process.env[k];
