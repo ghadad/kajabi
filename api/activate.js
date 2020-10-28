@@ -52,7 +52,7 @@ module.exports = async (req, res) => {
 
     });
 
-    console.log(whr)
+    console.info(whr)
     /* res.json({
         hooks:hooks,
         headers: req.headers,
