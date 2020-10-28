@@ -8,7 +8,7 @@ let  hooks ={};
 
 module.exports = (req, res) => {
     if(req.headers[X-iCount-Secret] !==  process.env.ICOUNT_SECRET ) 
-    throw new Error("Invalid icount secret ");
+    return res.status(401).send({error:"invalid icount secret"})
     res.json({
      //  hooks:hooks,
      headers:req.headers, 
