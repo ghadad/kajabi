@@ -7,7 +7,7 @@ Object.keys(process.env).forEach(k => {
 })
 
 module.exports = async (req, res) => {
-    console.log("get activation request",req.body)
+    console.info("get activation request", req.body)
     let icountSecret = req.headers['X-iCount-Secret'] || req.headers['x-icount-secret'];
 
     if (icountSecret !== process.env.ICOUNT_SECRET)
@@ -37,9 +37,20 @@ module.exports = async (req, res) => {
     let whr = await Axios.post(webhook, {
         email: req.body.email,
         name: req.body.name
-    }).catch(function(e) { 
-        console.error("ERROR:",e);
-        });
+    }).catch(function (error) {
+        if (error.response) {
+            // Request made and server responded
+            console.log("error.response.data",error.response.data);
+            console.log("error.response.status",error.response.status);
+        } else if (error.request) {
+            // The request was made but no response was received
+            console.log("error.request",error.request);
+        } else {
+            // Something happened in setting up the request that triggered an Error
+            console.log('Error', error.message);
+        }
+
+    });
 
     console.log(whr)
     /* res.json({
@@ -52,7 +63,7 @@ module.exports = async (req, res) => {
     */
 
     res.json({
-        data:whr.data,
+        data: whr.data,
         success: true
     })
 }
