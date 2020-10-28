@@ -10,7 +10,8 @@ module.exports = async (req, res) => {
 
     if (!(req.headers['X-iCount-Secret'] == process.env.ICOUNT_SECRET || req.headers['x-icount-Secret'] == process.env.ICOUNT_SECRET))
         return res.status(401).send({
-            error: "invalid icount secret"
+            error: "invalid icount secret",
+            headers : req.headers
         });
     if(!req.body.sku) 
     return res.status(401).send({
