@@ -7,7 +7,9 @@ Object.keys(process.env).forEach(k => {
 })
 
 module.exports = async (req, res) => {
-    console.log("get activation request", req.body)
+
+    console.log("get activation request %j", req.body)
+    
     let icountSecret = req.headers['X-iCount-Secret'] || req.headers['x-icount-secret'];
 
     let errors = [];
@@ -57,7 +59,6 @@ module.exports = async (req, res) => {
 
     };
 
-    console.log(whr)
     /* res.json({
         hooks:hooks,
         headers: req.headers,

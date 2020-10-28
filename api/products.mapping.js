@@ -1,1 +1,0 @@
-module.exports = {A1:"http://kajabi"}
