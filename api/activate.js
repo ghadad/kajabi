@@ -38,8 +38,8 @@ module.exports = async (req, res) => {
         email: req.body.email,
         name: req.body.name
     }).catch(e => { 
-        console.error(e),
-    });
+        console.error(e);
+        });
     console.log(whr)
     /* res.json({
         hooks:hooks,
