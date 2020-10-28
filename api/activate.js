@@ -7,10 +7,11 @@ Object.keys(process.env).forEach(k => {
 })
 
 module.exports = (req, res) => {
-    if (req.headers['X-iCount-Secret'] !== process.env.ICOUNT_SECRET)
+    if (!(req.headers['X-iCount-Secret'] == process.env.ICOUNT_SECRET || req.headers['x-icount-Secret'] == process.env.ICOUNT_SECRET))
         return res.status(401).send({
-            error: "invalid icount secret",headers:req.headers
-        })
+            error: "invalid icount secret"
+        });
+
     res.json({
         //  hooks:hooks,
         headers: req.headers,
