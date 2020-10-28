@@ -34,39 +34,40 @@ module.exports = async (req, res) => {
             error: "Cannot find proper webhook for sku : " + req.body.sku
         });
 
-    let whr = {} ;
-    try { whr= await Axios.post(webhook, {
-        email: req.body.email,
-        name: req.body.name
-    });
-    
-} catch(error){
+    let whr = {};
+    try {
+        whr = await Axios.post(webhook, {
+            email: req.body.email,
+            name: req.body.name
+        });
+
+    } catch (error) {
         if (error.response) {
             // Request made and server responded
-            console.log("error.response.data",error.response.data);
-            console.log("error.response.status",error.response.status);
+            console.log("error.response.data", error.response.data);
+            console.log("error.response.status", error.response.status);
         } else if (error.request) {
             // The request was made but no response was received
-            console.log("error.request",error.request);
+            console.log("error.request", error.request);
         } else {
             // Something happened in setting up the request that triggered an Error
             console.log('Error', error.message);
         }
 
-    });
+    };
 
-    console.info(whr)
-    /* res.json({
-        hooks:hooks,
-        headers: req.headers,
-        body: req.body,
-        query: req.query,
-        cookies: req.cookies,
-    })
-    */
+console.info(whr)
+/* res.json({
+    hooks:hooks,
+    headers: req.headers,
+    body: req.body,
+    query: req.query,
+    cookies: req.cookies,
+})
+*/
 
-    res.json({
-        data: whr.data,
-        success: true
-    })
+res.json({
+    data: whr.data,
+    success: true
+})
 }
