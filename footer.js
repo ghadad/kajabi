@@ -13,12 +13,8 @@ $( document ).ready(function() {
   }
 
   $("footer").show();
+  console.log(newLists.join(''))
 
-  $(newLists.join('')).insertAfter("footer .link-list")
-  //lists.each(function() {
-    //console.log($(this).remove());
-   // $(this).html($footerLinks[0].html)
-  //});
-  $("footer").show();
-console.log($footerLinks) ;
+  $("footer .container.footer__container").append(newLists.join(''))
+
 });
