@@ -5,12 +5,15 @@ $( document ).ready(function() {
     $("footer").show();
     return  ; 
   }
-  lists[0].hide();
-  
+  $("footer .link-list").hide();
+
   var newLists =[];
   for(var e of $footerLinks){
     newLists.push(e.html)
   }
+
+  $("footer").show();
+
   $(newLists.join('')).insertAfter("footer .link-list")
   //lists.each(function() {
     //console.log($(this).remove());
