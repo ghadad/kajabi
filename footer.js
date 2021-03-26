@@ -2,7 +2,7 @@ $( document ).ready(function() {
 
   var lists = $("footer .link-list");
   if(lists.length>1) {
-    lists.show();
+    $("footer").show();
     return  ; 
   }
   
@@ -15,5 +15,6 @@ $( document ).ready(function() {
     //console.log($(this).remove());
    // $(this).html($footerLinks[0].html)
   //});
+  $("footer").show();
 console.log($footerLinks) ;
 });
