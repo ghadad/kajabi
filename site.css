@@ -1,2 +1,6 @@
 footer  {display:none}
+ul.footer_ul {
+    list-style: none;
+    text-align: right;
+}
 
