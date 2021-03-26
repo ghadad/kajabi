@@ -5,6 +5,7 @@ $( document ).ready(function() {
     $("footer").show();
     return  ; 
   }
+  lists[0].hide();
   
   var newLists =[];
   for(var e of $footerLinks){
