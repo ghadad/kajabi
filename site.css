@@ -4,7 +4,7 @@ ul.footer_ul {
     text-align: right;
 }
 
-.blog-listing__data {
+.blog-post-body ,.blog-listing__data {
     direction: rtl;
     unicode-bidi: bidi-override;
 }
@@ -26,4 +26,5 @@ ul.footer_ul {
         overflow: hidden;
         text-overflow: ellipsis;
      }
+
 }
