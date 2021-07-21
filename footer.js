@@ -17,7 +17,6 @@ $(document).ready(function () {
 
   $("footer .container.footer__container").append(newLists.join(''))
 
-  $('.blog-listing__more').text('המשיכו לקרוא ...');
-
+  $('.blog-listing__more').html('המשיכו לקרוא ...');
 
 });

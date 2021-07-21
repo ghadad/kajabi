@@ -9,6 +9,9 @@ ul.footer_ul {
     unicode-bidi: bidi-override;
 }
 
+.blog-listing__content p .responsive-embed , 
+.blog-listing__content .responsive-embed  {display:none}
+
 @media (min-width: 768px){
 
     .kjb-video-responsive {
