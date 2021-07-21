@@ -1,14 +1,14 @@
-$( document ).ready(function() {
+$(document).ready(function () {
 
   var lists = $("footer .link-list");
-  if(lists.length>1) {
+  if (lists.length > 1) {
     $("footer").show();
-    return  ; 
+    return;
   }
   $("footer .link-list").hide();
 
-  var newLists =[];
-  for(var e of $footerLinks){
+  var newLists = [];
+  for (var e of $footerLinks) {
     newLists.push(e.html)
   }
 
@@ -16,5 +16,8 @@ $( document ).ready(function() {
   console.log(newLists.join(''))
 
   $("footer .container.footer__container").append(newLists.join(''))
+
+  $('.blog-listing__more').text('המשיכו לקרוא ...');
+
 
 });
