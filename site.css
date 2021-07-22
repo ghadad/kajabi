@@ -53,10 +53,12 @@ ul.footer_ul {
     .blog-listings .col-lg-3.sidebar__container--hidden-mobile {
         display: none;
     }
+
     .blog-listings > .sizer > .container > .row >.col-lg-9 {
         width:90%
     }
     
+    .blog-post-body .blog-post-body__media {display:none}
 }
 
 
