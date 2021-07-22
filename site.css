@@ -15,6 +15,10 @@ ul.footer_ul {
 @media (max-width: 650px)  { 
     /* for 10 inches tablet screens */
     .accordion-body iframe {width:100%}
+    ul.footer_ul {
+        
+        text-align: center;
+    }
   } 
 
   
