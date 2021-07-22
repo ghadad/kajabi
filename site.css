@@ -12,9 +12,9 @@ ul.footer_ul {
 .blog-listing__content p .responsive-embed , 
 .blog-listing__content .responsive-embed  {display:none}
 
-@media (max-width: 600px)  { 
+@media (max-width: 650px)  { 
     /* for 10 inches tablet screens */
-    .content iframe {width:100%}
+    .accordion-body iframe {width:100%}
   } 
 
   
