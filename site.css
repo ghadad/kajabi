@@ -12,8 +12,13 @@ ul.footer_ul {
 .blog-listing__content p .responsive-embed , 
 .blog-listing__content .responsive-embed  {display:none}
 
-@media (min-width: 768px){
+@media (max-width: 600px)  { 
+    /* for 10 inches tablet screens */
+    .content iframe {width:100%}
+  } 
 
+  
+@media (min-width: 768px){
     .kjb-video-responsive {
         height: 220px;
     }
@@ -34,3 +39,5 @@ ul.footer_ul {
      }
 
 }
+
+
