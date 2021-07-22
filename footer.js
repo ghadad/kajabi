@@ -20,3 +20,4 @@ $(document).ready(function () {
   $('.blog-listing__more').html('המשיכו לקרוא ...');
 
 });
+
