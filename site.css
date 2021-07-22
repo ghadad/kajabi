@@ -33,14 +33,7 @@ ul.footer_ul {
         height: 100%;
     }
 
-    .blog-listing__content {
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        
-     }
+   
 
      .blog-post-body__media {
         padding: 0 15%;
@@ -62,3 +55,11 @@ ul.footer_ul {
 
 .blog-post-body .blog-post-body__media {display:none}
 
+.blog-listing__content {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+ }
