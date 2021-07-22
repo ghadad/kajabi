@@ -41,6 +41,10 @@ ul.footer_ul {
         text-overflow: ellipsis;
         
      }
+     
+     .blog-post-body__media {
+        padding: 0 15%;
+    }
 
 }
 
