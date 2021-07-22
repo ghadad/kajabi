@@ -64,9 +64,29 @@ ul.footer_ul {
  }
 
  .blog-listing__content{
+    font-size: 14px;
+    color: #4A4A4A;
+    overflow: hidden;
+    line-height: 26px;
+    position: relative;
+    height: 45px;
+  }
+  .blog-listing__content:after {
+    content: '...';
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10%;
+    height: 1.8em;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+  }
+
+ .blog-listing__content{
     overflow: hidden;
     position: relative;
   }
+
   .blog-listing__content:after {
     content: '...';
     text-align: right;
