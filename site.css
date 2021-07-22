@@ -70,7 +70,6 @@ ul.footer_ul {
     height: 45px;
   }
   .blog-listing__content:after {
-    content: '...';
     text-align: right;
     position: absolute;
     bottom: 0;
