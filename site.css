@@ -41,11 +41,15 @@ ul.footer_ul {
         text-overflow: ellipsis;
         
      }
-     
+
      .blog-post-body__media {
         padding: 0 15%;
     }
 
+    .blog-post-body  .responsive-embed {
+        margin-right: 15%;
+        margin-left: 15%;
+    }
 }
 
 
