@@ -95,6 +95,6 @@ h1.post-body-title ,form.new_comment ,.comment {
 .product-outline.show.show2 .media {
     margin-right:20px
 }
-.product-outline.show.show2 .media .mr svg {
+.product-outline.show.show2 .media .mr svg , .product-outline.show.show2 .media .mr .progress-icon-wrapper {
     margin-left: 10px;
 }
