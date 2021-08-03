@@ -51,6 +51,19 @@ ul.footer_ul {
         width:90%
     }
     
+    .product-outline.show.show2 {
+        text-align: right;
+        direction: rtl;
+        unicode-bidi: bidi-override;
+    }
+    .product-outline.show.show2 .media {
+        margin-right:20px
+    }
+    .product-outline.show.show2 .media {
+        margin-right:20px
+    } .mr svg {
+        margin-left: 10px;
+    }
 }
 
 .blog-post-body .blog-post-body__media {display:none}
