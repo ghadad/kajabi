@@ -78,3 +78,8 @@ ul.footer_ul {
     height: 1.8em;
   }
 
+  .comment {
+    text-align: right;
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
