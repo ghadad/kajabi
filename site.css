@@ -83,3 +83,9 @@ ul.footer_ul {
     direction: rtl;
     unicode-bidi: bidi-override;
 }
+
+form.new_comment {
+    text-align: right;
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
