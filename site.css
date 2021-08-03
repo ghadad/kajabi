@@ -78,14 +78,9 @@ ul.footer_ul {
     height: 1.8em;
   }
 
-  .comment {
+h1.post-body-title ,form.new_comment ,.comment {
     text-align: right;
     direction: rtl;
     unicode-bidi: bidi-override;
 }
 
-form.new_comment {
-    text-align: right;
-    direction: rtl;
-    unicode-bidi: bidi-override;
-}
