@@ -84,6 +84,8 @@ h1.post-body-title ,form.new_comment ,.comment {
     direction: rtl;
     unicode-bidi: bidi-override;
 }
+
+.product-outline-post ,
 .product-outline.show.show2 {
     text-align: right;
     direction: rtl;
