@@ -100,3 +100,5 @@ h1.post-body-title ,form.new_comment ,.comment {
 .product-outline-post .media .mr svg ,.product-outline.show.show2 .media .mr svg , .product-outline.show.show2 .media .mr .progress-icon-wrapper {
     margin-left: 10px;
 }
+
+.post-actions-duration { unicode-bidi: embed; }
