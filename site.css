@@ -107,6 +107,6 @@ h1.post-body-title ,form.new_comment ,.comment {
 
 .post-actions-duration { unicode-bidi: embed;     direction: ltr;  }
 .product-outline-post .post-actions-duration {    margin-right: 10px;}
-.subcat.post-actions-duration {    margin-right: 50px;}
+.subcat.post-actions-duration {    margin-right: 50px;font-size: 0.9em;}
 
 .post-actions-duration  i.fa-video {color: gray;}
