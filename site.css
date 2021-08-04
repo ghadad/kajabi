@@ -102,5 +102,6 @@ h1.post-body-title ,form.new_comment ,.comment {
 }
 
 
-.post-actions-duration { unicode-bidi: embed;     direction: ltr;    margin-right: 50px;}
+.post-actions-duration { unicode-bidi: embed;     direction: ltr;  }
 .product-outline-post .post-actions-duration {    margin-right: 10px;}
+.product-outline-subcategory .post-actions-duration {    margin-right: 50px;}
