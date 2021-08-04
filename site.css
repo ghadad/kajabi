@@ -101,4 +101,4 @@ h1.post-body-title ,form.new_comment ,.comment {
     margin-left: 10px;
 }
 
-.post-actions-duration { unicode-bidi: embed; }
+.post-actions-duration { unicode-bidi: embed;     direction: ltr;    margin-right: 50px;}
