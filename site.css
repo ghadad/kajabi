@@ -101,6 +101,9 @@ h1.post-body-title ,form.new_comment ,.comment {
     margin-left: 10px;
 }
 
+.product-outline-post .media-body {
+    font-size: 1.1em;
+}
 
 .post-actions-duration { unicode-bidi: embed;     direction: ltr;  }
 .product-outline-post .post-actions-duration {    margin-right: 10px;}
