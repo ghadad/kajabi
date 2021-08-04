@@ -91,12 +91,12 @@ h1.post-body-title ,form.new_comment ,.comment {
     direction: rtl;
     unicode-bidi: bidi-override;
 }
-.product-outline.show.show2 .media {
+.product-outline-post .media , .product-outline.show.show2 .media {
     margin-right:20px
 }
 .product-outline.show.show2 .media {
     margin-right:20px
 }
-.product-outline.show.show2 .media .mr svg , .product-outline.show.show2 .media .mr .progress-icon-wrapper {
+.product-outline-post .media .mr svg ,.product-outline.show.show2 .media .mr svg , .product-outline.show.show2 .media .mr .progress-icon-wrapper {
     margin-left: 10px;
 }
