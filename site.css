@@ -19,6 +19,7 @@ ul.footer_ul {
         
         text-align: center;
     }
+    
   } 
 
   
@@ -50,7 +51,9 @@ ul.footer_ul {
     .blog-listings > .sizer > .container > .row >.col-lg-9 {
         width:90%
     }
-    
+    .main-sidebar {
+        max-width: 370px;
+      }
   
 }
 
@@ -114,4 +117,5 @@ h1.post-body-title ,form.new_comment ,.comment {
 h3.product-outline-subcategory {
     border-bottom: 2px solid #d2cdcd;
     padding-bottom: 7px;
+    padding-top: 2px;
 }
