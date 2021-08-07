@@ -88,6 +88,10 @@ h1.post-body-title ,form.new_comment ,.comment {
     unicode-bidi: bidi-override;
 }
 
+
+.product-outline {
+    padding-right:10px
+}
 .product-outline-subcategory,.product-outline-category, .product-outline-post ,
 .product-outline.show.show2 {
     text-align: right;

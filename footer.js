@@ -13,7 +13,6 @@ $(document).ready(function () {
   }
 
   $("footer").show();
-  console.log(newLists.join(''))
 
   $("footer .container.footer__container").append(newLists.join(''))
 
