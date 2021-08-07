@@ -110,3 +110,8 @@ h1.post-body-title ,form.new_comment ,.comment {
 .subcat.post-actions-duration {    margin-right: 50px;}
 
 .post-actions-duration  i.fa-video {color: gray;font-size: 0.9em;}
+
+h3.product-outline-subcategory {
+    border-bottom: 2px solid #d2cdcd;
+    padding-bottom: 7px;
+}
