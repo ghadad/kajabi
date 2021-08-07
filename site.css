@@ -131,3 +131,8 @@ h3.product-outline-subcategory {
         display: block;
     }
 }
+
+i.bi.bi-circle {
+    margin-left: 10px;
+    line-height: 26px;
+}
