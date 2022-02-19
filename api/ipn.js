@@ -15,7 +15,10 @@ const addConversion = async function(refcode,externalId,amount) {
     console.log("tapfiliate data:",data)
     return data;
   } catch(e) {
-      console.error("tapfiliate error:",e.response.data)
+      if(e.response){
+        console.error("tapfiliate error:",e.response.data);
+      }
+      
   }
 
 }
@@ -46,6 +49,7 @@ module.exports = async (req, res) => {
             errors: errors
         });
 
+        console.log("report tapfiliate  affref:",params.affref," docnum:",params.docnum," sum:",params.sum);
 
  
     // add affiliate 
@@ -58,7 +62,6 @@ module.exports = async (req, res) => {
     }
 
    
- console.log("report tapfiliate  affref:",params.affref," docnum:",params.docnum," sum:",params.sum);
     res.json({
         affref: params.affref,
         sum:params.sum,
