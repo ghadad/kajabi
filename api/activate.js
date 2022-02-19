@@ -1,5 +1,5 @@
 const Axios = require("axios");
-const  Tap = require("./tapfiliate");
+
 /* let hooks = {};
 Object.keys(process.env).forEach(k => {
     if (k.match(/K\d/))
@@ -48,15 +48,6 @@ module.exports = async (req, res) => {
             error: "Cannot find proper webhook for sku : " + req.body.sku
         });
     */
-
-    // add affiliate 
-    if(params.m__affref) {
-        try {
-            await Tap.addConversion(params.m__affref,item.sku,params.totalwithnicui);
-        } catch(e) {
-            console.error(e);
-        }
-    }
 
     let whr = {};
     let errData, errStatus, errMessage;
