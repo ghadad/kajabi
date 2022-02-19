@@ -11,7 +11,7 @@ const addConversion = async function(refcode,externalId,amount) {
    }
  
   try { 
-    let data = await axios.post(url+"/conversions/",{external_id:externalId,amount:amount,referral_code:refcode},config);
+    let data = await Axios.post(url+"/conversions/",{external_id:externalId,amount:amount,referral_code:refcode},config);
     console.log("tapfiliate data:",data)
     return data;
   } catch(e) {
