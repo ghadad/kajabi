@@ -18,7 +18,7 @@ const addConversion = async function(refcode,externalId,amount) {
       if(e.response){
         console.error("tapfiliate error:",e.response.data);
       }
-      consoloe.log(e)
+      console.log(e)
       
   }
 
