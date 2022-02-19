@@ -54,7 +54,7 @@ module.exports = async (req, res) => {
 
  
     // add affiliate 
-    if(request.query && req.query.affref) {
+    if(req.query && req.query.affref) {
         try {
             await addConversion(req.query.affref,params.docnum,params.sum);
         } catch(e) {
