@@ -13,8 +13,8 @@ $(document).ready(function () {
              var url = new URL($(this).attr("href"));
               var params = new URLSearchParams(url.search);
               params.set("ipn_url",'https://kajabi.vercel.app/api/ipn?affref=' +affref);
-              $(this).attr("href", url.origin + '?' + params.toString()); // change link href
-              console.log("url",url.origin + '?' + params.toString())
+              $(this).attr("href", url.origin + url.pathname + '?' + params.toString()); // change link href
+              console.log("url",url.origin + url.pathname +'?' + params.toString())
               $(this).trigger("click"); 
               return false;
         });
