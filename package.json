@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/ghadad/kajabi#readme",
   "dependencies": {
-    "axios": "^0.21.0"
+    "axios": "^0.26.0",
+    "install": "^0.13.0",
+    "npm": "^8.5.1"
   }
 }
