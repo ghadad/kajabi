@@ -50,13 +50,13 @@ module.exports = async (req, res) => {
             errors: errors
         });
 
-        console.log("report tapfiliate  affref:",params.affref," docnum:",params.docnum," sum:",params.sum);
+        console.log("report tapfiliate  affref:",request.query.affref," docnum:",params.docnum," sum:",params.sum);
 
  
     // add affiliate 
-    if(params.affref) {
+    if(request.query && request.query.affref) {
         try {
-            await addConversion(params.affref,params.docnum,params.sum);
+            await addConversion(request.query.affref,params.docnum,params.sum);
         } catch(e) {
             console.error(e);
         }
@@ -64,7 +64,7 @@ module.exports = async (req, res) => {
 
    
     res.json({
-        affref: params.affref,
+        affref: request.query.affref,
         sum:params.sum,
         docnum:params.docnum,
         success: true,
