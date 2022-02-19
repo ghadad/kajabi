@@ -10,10 +10,13 @@ $(document).ready(function () {
   
     if(affref) {
         $( "a[href*='/app.icount.co.il/'" ).on("click", function (e) {
+
               var url = new URL($(this).attr("href"));
+              
               var params = new URLSearchParams(url.search);
               params.set("ipn_url",'https://kajabi.vercel.app/api/ipn?affref=' +affref);
               $(this).attr("href", url.pathname + '?' + params.toString()); // change link href
+              console.log("url",url.pathname + '?' + params.toString())
               $(this).trigger("click"); 
               return false;
         });
