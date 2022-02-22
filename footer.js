@@ -13,7 +13,7 @@ $(document).ready(function () {
               //var url = new URL($(this).attr("href"));
               //var params = new URLSearchParams(url.search);
               var params = new URLSearchParams();
-              params.set("ipn_url",'https://kajabi.vercel.app/api/ipn?affref=' +affref);
+               params.set("ipn_url",'https://kajabi.vercel.app/api/ipn?affref=' +affref);
               //params.set("utm_nooverride",1);
               $(this).attr("href", url.origin + url.pathname + '?' + params.toString()); // change link href
               console.log("url",url.origin + url.pathname +'?' + params.toString())
