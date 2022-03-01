@@ -14,7 +14,7 @@ $(document).ready(function () {
               var params = new URLSearchParams(url.search);
           //    var params = new URLSearchParams();
               params.set("ipn_url",'https://kajabi.vercel.app/api/ipn?affref=' +affref);
-              //params.set("utm_nooverride",1);
+              params.set("utm_nooverride",1);
               for(var key of params.keys()) {
                 if(key.match(/utm/)) {
                   params.delete(key);
@@ -22,12 +22,6 @@ $(document).ready(function () {
               }
               $(this).attr("href", url.origin + url.pathname + '?' + params.toString()); // change link href
               console.log("url",url.origin + url.pathname +'?' + params.toString())
-              if(typeof window.gtag == 'function')
-	        		{
-			        	var gtag_params = {url: url.origin + url.pathname, affref:affref};
-				        gtag('event', 'icount_click', gtag_params);
-		        	}
-
               $(this).trigger("click"); 
               return false;
         });
