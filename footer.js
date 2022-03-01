@@ -22,9 +22,20 @@ $(document).ready(function () {
                   params.delete(key);
                 }
               }
+
+          
+ 
+              
               // $(this).attr("href", url.origin + url.pathname + '?' + params.toString()); // change link href
               console.log("url",url.origin + url.pathname +'?' + params.toString())
               var newUrl = url.origin + url.pathname +'?' + params.toString();
+              if(typeof window.gtag == 'function')
+              {
+                var gtag_params = {url: url.origin + url.pathname, affref: affref};
+                gtag('event', 'goToPurcahse', gtag_params);
+              }
+        
+
               window.location.href = newUrl;
               return false;
         });
