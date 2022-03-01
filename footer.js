@@ -10,6 +10,7 @@ $(document).ready(function () {
   
     if(affref) {
         $( "a[href*='/app.icount.co.il/'" ).on("click", function (e) {
+              e.preventDefault();
               var url = new URL($(this).attr("href"));
               var params = new URLSearchParams(url.search);
           //    var params = new URLSearchParams();
@@ -20,9 +21,13 @@ $(document).ready(function () {
                   params.delete(key);
                 }
               }
-              $(this).attr("href", url.origin + url.pathname + '?' + params.toString()); // change link href
-              console.log("url",url.origin + url.pathname +'?' + params.toString())
-              $(this).trigger("click"); 
+              
+              //$(this).attr("href", url.origin + url.pathname + '?' + params.toString()); // change link href
+              //console.log("url",url.origin + url.pathname +'?' + params.toString())
+
+          //    $(this).trigger("click"); 
+              var newUrl =  url.origin + url.pathname + '?' + params.toString();
+              window.location.href = newUrl;
               return false;
         });
   }
