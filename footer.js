@@ -22,6 +22,12 @@ $(document).ready(function () {
               }
               $(this).attr("href", url.origin + url.pathname + '?' + params.toString()); // change link href
               console.log("url",url.origin + url.pathname +'?' + params.toString())
+              if(typeof window.gtag == 'function')
+	        		{
+			        	var gtag_params = {url: url.origin + url.pathname, affref:affref};
+				        gtag('event', 'icount_click', gtag_params);
+		        	}
+
               $(this).trigger("click"); 
               return false;
         });
