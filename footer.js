@@ -22,8 +22,9 @@ $(document).ready(function () {
                   params.delete(key);
                 }
               }
-              $(this).attr("href", url.origin + url.pathname + '?' + params.toString()); // change link href
+              // $(this).attr("href", url.origin + url.pathname + '?' + params.toString()); // change link href
               console.log("url",url.origin + url.pathname +'?' + params.toString())
+              var newUrl = url.origin + url.pathname +'?' + params.toString();
               window.location.href = newUrl;
               return false;
         });
