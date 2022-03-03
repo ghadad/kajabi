@@ -16,10 +16,10 @@ $(document).ready(function () {
               var params = new URLSearchParams(url.search);
               var params = new URLSearchParams();
               params.set("ipn_url",'https://kajabi.vercel.app/api/ipn?affref=' +affref);
-              params.set("utm_nooverride",1);
+              //params.set("utm_nooverride",1);
               for(var key of params.keys()) {
                 if(key.match(/utm/)) {
-                  params.delete(key);
+               //   params.delete(key);
                 }
               }
 
